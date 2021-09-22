@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="https://cdn2.iconfinder.com/data/icons/security-1/512/public_key-512.png">
+        <title>Crypto-Text</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js" integrity="sha512-E8QSvWZ0eCLGk4km3hxSsNmGWbLtSCSUcewDQPQWZF6pEU8GlT8a5fF32wOl1i8ftdMhssTrF/OhyGWwonTcXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+        body{
+        font-family: "Poppins", sans-serif;
+        background-repeat: no-repeat;
+        background: rgb(34,193,195);
+        background: linear-gradient(69deg, rgba(34,193,195,1) 32%, rgba(45,121,253,1) 100%);
+        }
+        .wrapper{
+        display: grid;
+        position: absolute;
+        min-height: 10rem;
+        min-width: 10rem;
+        text-align: center;
+        grid-template-rows: auto auto auto auto;
+        grid-template-columns: auto;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        background-color: white;
+        border-radius: 5px;
+        padding-top: 0rem;
+        box-shadow: 5px 10px 18px #1f6eed;
+        }
+        h2{
+        margin: 0;
+        padding: 10px;
+        color: #1f6eed;
+        line-height: 3rem;
+        }
+        textarea, input, button{
+        padding: 10px;
+        margin: 10px;
+        outline: none;
+        font-size: 1rem;
+        border-radius: 5px;
+        }
+        textarea{
+        min-width: 13.5rem;
+        min-height: 10rem;
+        border: 2px solid lightgray;
+        }
+        textarea:focus{
+        border: 2px solid  #1f6eed;
+        }
+        input{
+        outline: none;
+        border: 2px solid lightgray;
+        }
+        input:focus{
+        border: 2px solid  #1f6eed;
+        }
+        
+        button{
+        background-color: #1f6eed;
+        color: white;
+        border:  none;
+        cursor: pointer;
+        }
+        button:hover{
+        background-color: #6ab2e6;
+        }
+        </style>
+    </head>
+    <body>
+        <div class="wrapper">
+            <h2>Crypto-Text</h2>
+            <textarea id='text-box' placeholder="Input Text"></textarea>
+            <input type="text" placeholder="Password" id='pwd-box' value="Password">
+            <button id='encrypt-btn'>Encrypt</button>
+            <button id='decrypt-btn'>Decrypt</button>
+            <button id='clear-btn'>Clear</button>
+        </div>
+    </body>
+    <script>
+    const textbox = document.getElementById("text-box")
+    const pwdbox = document.getElementById("pwd-box")
+    const encryptbtn = document.getElementById("encrypt-btn")
+    const decryptbtn = document.getElementById("decrypt-btn")
+    const clearbtn = document.getElementById("clear-btn")
+    // Copy
+    function  copy(){
+    textbox.select()
+    document.execCommand('Copy')
+    setTimeout(function() { alert('Copied'); }, 0)
+    };
+    // Clear
+    clearbtn.onclick = function(){
+    textbox.value = '';
+    };
+    // Encrypt
+    encryptbtn.onclick = function(){
+    var encrypted = CryptoJS.AES.encrypt(textbox.value, pwdbox.value);
+    textbox.value = encrypted
+    copy()
+    };
+    // Decrypt
+    decryptbtn.onclick = function(){
+    var decrypted = CryptoJS.AES.decrypt(textbox.value, pwdbox.value);
+    textbox.value = decrypted.toString(CryptoJS.enc.Utf8);
+    copy()
+    };
+    </script>
+</html>
