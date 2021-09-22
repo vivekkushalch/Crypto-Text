@@ -26,7 +26,7 @@ Features
 
 Installation
 -----
-> Download **[Crypto-Text.html](https://github.com/vivekkushalch/Crypto-Text/blob/main/Crypto-Text.html)** and double click the file to run.
+> Download **[Crypto-Text.html](https://github.com/vivekkushalch/Crypto-Text/blob/main/Crypto-Text.html)** and double click on the file to run.
 
 
 
