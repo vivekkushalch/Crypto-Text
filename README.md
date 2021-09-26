@@ -32,6 +32,7 @@ Installation
 
 Usage and Example
 ----
+>For a Live Preview visit **[vivekkushalch.github.io/Crypto-Text/](https://vivekkushalch.github.io/Crypto-Text/)**
 <img src="https://github.com/vivekkushalch/Crypto-Text/blob/main/Crypto-Text_Usage.gif" alt='Crypto-Text_Usage.gif'/>
 
 
