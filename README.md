@@ -1,11 +1,8 @@
-Crypto-Text
-==========
-
-**A Cross Platform implementation of Crypto-JS AES Text Encryption and Decryption wrapped in a modern UI**
-
-
-<img src="https://cdn2.iconfinder.com/data/icons/security-1/512/public_key-512.png" width="250" alt='Crypto-Text'/>
-
+<p align='center'> 
+  <img src="https://cdn2.iconfinder.com/data/icons/security-1/512/public_key-512.png" width="250" alt='Crypto-Text'/>
+  <h1 align='center'>Crypto-Text</h1>
+  <h3 align='center'>A Cross Platform implementation of Crypto-JS AES Text Encryption and Decryption wrapped in a modern UI</h3>
+</p>
 
 Made With
 ---
